@@ -1,6 +1,26 @@
-#include <iostream>
+// This progarm uses an array of objects.
+// The objects are instance of the Circle class.
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+#include <iostream>
+#include <iomanip>
+#include "Circle.hpp"
+using namespace std;
+
+const int NUM_CIRCLES = 4;
+
+int main()
+{
+    Circle circle[NUM_CIRCLES];                 // Define an array of Circle objects
+
+    // Use a loop to initialize the radius of each object
+    for (int index = 0; index < NUM_CIRCLES; index++)
+    {
+        double r;
+        cout << "Enter the radius for circle " << (index + 1) << ": ";
+        cin >> r;
+        circle[index].setRadius(r);
+    }
+
+    // Use a loop to get and print out the are of each object
+
 }
