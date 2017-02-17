@@ -22,5 +22,13 @@ int main()
     }
 
     // Use a loop to get and print out the are of each object
+    cout    << fixed << showpoint << setprecision(2);
+    cout    << "\nHere are the areas of the " << NUM_CIRCLES
+            << " circles.\n";
+    for (int index = 0; index < NUM_CIRCLES; index++)
+    {
+        cout << "circle " << (index + 1) << setw(8)
+            << circle[index].findArea() << endl;
+    }
 
 }
